@@ -16,10 +16,12 @@ get '/notes/new' do
   erb :create_note
 end
 
-post '/notes/new' do
+post '/notes' do
   Note.create!(params)
   # create a new note from form
 
-  erb :create_note
+  redirect '/notes'
 end
+
+
 
