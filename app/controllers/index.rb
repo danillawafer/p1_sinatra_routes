@@ -4,7 +4,22 @@ get '/' do
 end
 
 get '/notes' do
-  # show all notes
+  # show all notes (read)
   @all_notes = Note.all
   erb :notes
 end
+
+get '/notes/new' do
+  
+  # send user to form for creating note`
+
+  erb :create_note
+end
+
+post '/notes/new' do
+  Note.create!(params)
+  # create a new note from form
+
+  erb :create_note
+end
+
