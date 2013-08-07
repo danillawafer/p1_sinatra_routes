@@ -1,5 +1,5 @@
-<ol>
+
 <%@all_notes.each do |note|%>
-  <li><%=note.content%></li>
+  <%="#{note.id}. #{note.content}"%><br />
 <%end%>
-</ol>
+

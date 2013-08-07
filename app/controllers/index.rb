@@ -39,4 +39,7 @@ put '/notes/:id' do
   redirect '/notes'
 end
 
-
+delete '/notes/:id' do
+  Note.find(params[:id]).destroy
+  redirect '/notes'
+end
